@@ -8,19 +8,25 @@
     <!-- Add the script here -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Fetch data from the API
-            fetch('https://footballmanagergame-771c01868d32.herokuapp.com/history/top3Finishers/1')
-                .then(response => response.json())
-                .then(data => {
-                    // Handle the data here
-                    console.log(data);
+            // Fetch data from the API with credentials
+            fetch('https://footballmanagergame-771c01868d32.herokuapp.com/history/top3Finishers/1', {
+                method: 'GET',
+                credentials: 'include', // Include credentials (cookies)
+                headers: {
+                    'Authorization': 'Basic ' + btoa('test:123456') // Basic authentication with username and password
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Handle the data here
+                console.log(data);
 
-                    // You can manipulate the data and update your HTML content as needed
-                })
-                .catch(error => {
-                    // Handle errors here
-                    console.error('Error fetching data:', error);
-                });
+                // You can manipulate the data and update your HTML content as needed
+            })
+            .catch(error => {
+                // Handle errors here
+                console.error('Error fetching data:', error);
+            });
         });
     </script>
 </head>
