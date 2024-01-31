@@ -10,11 +10,7 @@
         document.addEventListener('DOMContentLoaded', function () {
             // Fetch data from the API with credentials
             fetch('https://footballmanagergame-771c01868d32.herokuapp.com/', {
-                method: 'GET',
-                credentials: 'include', // Include credentials (cookies)
-                headers: {
-                    'Authorization': 'Basic ' + btoa('test:123456') // Basic authentication with username and password
-                }
+                method: 'GET'
             })
             .then(response => response.json())
             .then(data => {
