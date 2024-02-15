@@ -6,25 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Title</title>
     <!-- Add the script here -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Fetch data from the API with credentials
-            fetch('https://footballmanagergame-771c01868d32.herokuapp.com/', {
-                method: 'GET'
-            })
-            .then(response => response.json())
-            .then(data => {
-                // Handle the data here
-                console.log(data);
 
-                // You can manipulate the data and update your HTML content as needed
-            })
-            .catch(error => {
-                // Handle errors here
-                console.error('Error fetching data:', error);
-            });
-        });
-    </script>
 </head>
 <body>
     <!-- Your existing HTML content goes here -->
